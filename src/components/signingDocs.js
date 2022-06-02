@@ -10,8 +10,10 @@ import Web3 from 'web3'
  */
 class signingDocs {
     constructor (node, chainId) {
-        
+      this.node = node,
+      this.chainId = chainId
     }
+    
     async signData(name, surname, date, company, massege, fileHash) {
 
         const provider = await detectEthereumProvider({
@@ -125,5 +127,18 @@ class signingDocs {
           return false
         }
     
-      }
+    }
+
+    async createFileHash() {
+
+    }
+
+    async verifyFileHash() {
+
+    }
+
+    async verifySignData() {
+
+    }
+    
 }
